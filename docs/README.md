@@ -8,8 +8,6 @@ Sai Santosh Kumar Ganti
 
 In this assignment, you need to build a neural network by yourself and implement the backpropagation algorithm to train it.
 
-Each team must write a webpage report on the assignment. For example [http://www.cs.bu.edu/faculty/betke/cs440/restricted/p1/p1-template.html]. To ensure that each team member builds his or her own electronic portfolio, we ask that everybody submits his or her own report.
-
 ## Learning Objectives
 
 1. Understand how neural networks work 
@@ -31,9 +29,7 @@ Each team must write a webpage report on the assignment. For example [http://www
 
 ## Method and Implementation
 
-Give a concise description of the implemented method. For example, you might describe the motivation of your idea, the algorithmic steps of your methods, or the mathematical formulation of your method.
-
-Briefly outline the functions you created in your code to carry out the algorithmic steps you described earlier.
+We are using sigmoid function for the hidden layer and a softmax function for the output layer. 
 
 ## Experiments
 
@@ -47,16 +43,12 @@ List your experimental results. Provide examples of input images and output imag
 
 ## Discussion
 
-Discuss your method and results:
-
-What are the strengths and weaknesses of your method? Do your results show that your method is generally successful or are there limitations? Describe what you expected to find in your experiments, and how that differed or was confirmed by your results. Potential future work. How could your method be improved? What would you try (if you had more time) to overcome the failures/limitations of your work?
+Method and Results:
 
 Conclusions Based on your discussion, what are your conclusions? What is your main message?
 
+The accuracy of this model is 94% and this accuracy rate common among neural networks with one hidden layer. 
+
 ## Credits and Bibliography
 
-Cite any papers or other references you consulted while developing your solution. Citations to papers should include the authors, the year of publication, the title of the work, and the publication information (e.g., book name and publisher; conference proceedings and location; journal name, volume and pages; technical report and institution).
-
-Material on the web should include the url and date of access.
-
-Credit any joint work or discussions with your classmates.
+Joint work and discussion with Diptanshu Sign, FNU Mohit, Abhishek Rai Sharma and Vijay Karigowdara
