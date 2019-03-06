@@ -1,5 +1,7 @@
 # Programming Assignment 1
 
+CS640 Assignment 1
+
 Sai Santosh Kumar Ganti
 
 02/15/2019
@@ -24,7 +26,7 @@ In this assignment, you need to build a neural network by yourself and implement
 
 Below are my choices for the activation functions and the reason for choosing them: 
 
-1. sigmoid function as activation function and 
+1. sigmoid function as activation function because its the most common function which can give the weighted sum between 0 and 1with some bias in it for it to be inactive and only fire when the threshold is reached.
 2. softmax function because of its capability of converting output as probabilities.
 
 
@@ -33,14 +35,14 @@ Below are my choices for the activation functions and the reason for choosing th
 
 We will implement a simple 2 layer neural network with the following spec:
 
-1. Layer 1:
-   1. Input: Number of features
-   2. Output: Number of Nodes in the hidden layer
-   3. Activation Function:  Sigmoid Function
-2. Layer 2: 
-   1. Input: Number of Nodes in the hidden layer
-   2. Output: Number of dimensions in the output 
-   3. Activation Function:  None because the output here is passed through softmax function
+1. **Layer 1:**
+   1. *Input:* Number of features
+   2. *Output:* Number of Nodes in the hidden layer
+   3. *Activation Function:*  Sigmoid Function
+2. **Layer 2:** 
+   1. *Input:* Number of Nodes in the hidden layer
+   2. *Output:* Number of dimensions in the output 
+   3. *Activation Function:*  None because the output here is passed through softmax function
 
 #### Tasks: 
 
@@ -91,7 +93,8 @@ def softmax_hoty(softmax_scores):
 
 def k_fold(X,y,k,nn):
     kf = KFold(n_splits=k, random_state=None, shuffle=False)
-    kf.get_n_splits(X) # returns the number of splitting iterations in the cross-validator
+    # returns the number of splitting iterations in the cross-validator
+    kf.get_n_splits(X) 
     test_error = []
     train_error = []
     for train_index, test_index in kf.split(X):
@@ -112,19 +115,19 @@ def k_fold(X,y,k,nn):
 
 
 
-#### Linear Data
+## Linear Data
 
 
 
-#### Non-Linear Data
+## Non-Linear Data
 
 
 
-#### Learning Rate
+## Learning Rate
 
 
 
-#### Regularlization 
+## Regularlization 
 
 Any type of constrained optimization is regularization procedure. We could add a penality in the performance function which would indicate the complexity of a function.
 
@@ -136,13 +139,13 @@ Any type of constrained optimization is regularization procedure. We could add a
 
 
 
-##### L2 Regularization Implementation:
+#### L2 Regularization Implementation:
 
 We are adding a term **lambdaweight** to the weight on every term. This is used because for L2 regularization, we add lambda/2* ( weight ) ^ 2 to the performace function. Derivative of this function is lambda * weight.
 
 
 
-#### Digit Recognition
+## Digit Recognition
 
 We have taken a neural network with more than 10 nodes in the layer. If we tke less than 10, the network will have to share computations, which may lead to poor performance.
 
@@ -162,9 +165,7 @@ List your experimental results. Provide examples of input images and output imag
 
 ## Discussion
 
-Method and Results:
 
-Conclusions Based on your discussion, what are your conclusions? What is your main message?
 
 The accuracy of this model is 94% and this accuracy rate common among neural networks with one hidden layer. 
 
