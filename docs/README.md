@@ -12,5 +12,5 @@ Sai Santosh Kumar Ganti
 
 Here I will present my report for the programming assignment 1.
 
-Assignment 1 - <a href="PA1_Neural_Networks.html">Neural Networks</a>
+Assignment 1 - <a href="../PA1_Neural_Networks.html">Neural Networks</a>
 
