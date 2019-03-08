@@ -113,7 +113,30 @@ def k_fold(X,y,k,nn):
 
 #### Neural Network Implementation
 
+Intialize weights and bias randomly. Hence the network will initially perform poorly on a given training example since its just doing something random. 
 
+We have a cost here, meaning what is the cost of this difference ? The less the cost better the performance. And as such finding a minima of the convex function does this job. In cases where the function is complicated, we can calculate using the slope. Specifically, if we can figure out the slope of the function where we are then shift to the left of that slope is positive or shift the input to the right if the slope is negative. 
+
+If we do this repeatedly at each point checking the new slope and taking the appropriate step, we're gonna approach some local minimum of the function.
+
+Depending on which randome input you start at and there is no guarantee that the local minimum we're gonna land in is going to be the smallest possible value of the cost function. That's going to carry over to our neural network case as well and as such 
+
+Local Minimum -> Doable
+
+Global Minimum -> Crazy Hard
+
+However, if we make the step size proportional to the slope then when the slope is flattening out towards the minimum your steps get smaller and smaller and that helps from overshooting. 
+
+
+Bumping up the complexity a bit imagine instead a function with two inputs and one output. The input space here is XY plane and the cost function as being graphed as a surface above it. Now instead of asking about the slope of the function you have to ask which direction should you step in this input space so as to decrease the output of the function most quickly ? The answer to this is gradient of a function will give the steepest ascent. So naturally, taking the negative of the gradient gives you the direction to step that decreases the function most quickly and length of the gradient vector is actually an indication for just how steep that steepest slope is. 
+
+So essentially, its as good as:
+
+1. Computing gradient of that function (delta c)
+2. Take small step in - delta C direction
+3. Repeat the process.
+
+The algorithm for computing this gradient efficiently which is effectively the heart of how a neural network learns is called Back Propagation. 
 
 ## Linear Data
 
